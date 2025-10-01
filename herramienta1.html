@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatGPT</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="burbujas"></div>
+
+<!-- Menú -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Inteligencia Artificial</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="herramienta2.html">DALL·E</a></li>
+        <li class="nav-item"><a class="nav-link" href="herramienta3.html">GitHub Copilot</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenedor principal -->
+<section class="container my-5" style="max-width: 900px; padding: 30px; background: #fff; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.08);">
+
+  <h1 class="text-center text-primary mb-4">ChatGPT</h1>
+
+  <!-- Card flotante de Preguntas Frecuentes (Desktop) -->
+  <div class="d-none d-lg-block position-relative" style="width: 280px; float: right; margin-left: 20px;">
+    <div class="card shadow-sm border-primary sticky-top" style="top: 80px; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.08);">
+      <div class="card-header bg-primary text-white text-center">
+        Preguntas Frecuentes
+      </div>
+      <div class="card-body p-2">
+        <div class="accordion" id="faqChatGPT">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading1">
+              <button class="accordion-button p-2" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                ¿ChatGPT puede programar?
+              </button>
+            </h2>
+            <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqChatGPT">
+              <div class="accordion-body p-2">
+                Sí, puede generar código y explicar fragmentos en varios lenguajes de programación.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeading2">
+              <button class="accordion-button p-2 collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                ¿Es gratis usar ChatGPT?
+              </button>
+            </h2>
+            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqChatGPT">
+              <div class="accordion-body p-2">
+                Existen versiones gratuitas y de pago, según las funciones y límites de uso.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Preguntas Frecuentes (Móvil) -->
+  <div class="d-lg-none mb-4">
+    <div class="card shadow-sm border-primary" style="border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.08);">
+      <div class="card-header bg-primary text-white text-center">
+        Preguntas Frecuentes
+      </div>
+      <div class="card-body p-2">
+        <div class="accordion" id="faqChatGPTMobile">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeadingM1">
+              <button class="accordion-button p-2" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faqCollapseM1" aria-expanded="false" aria-controls="faqCollapseM1">
+                ¿ChatGPT puede programar?
+              </button>
+            </h2>
+            <div id="faqCollapseM1" class="accordion-collapse collapse" aria-labelledby="faqHeadingM1" data-bs-parent="#faqChatGPTMobile">
+              <div class="accordion-body p-2">
+                Sí, puede generar código y explicar fragmentos en varios lenguajes de programación.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHeadingM2">
+              <button class="accordion-button p-2 collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faqCollapseM2" aria-expanded="false" aria-controls="faqCollapseM2">
+                ¿Es gratis usar ChatGPT?
+              </button>
+            </h2>
+            <div id="faqCollapseM2" class="accordion-collapse collapse" aria-labelledby="faqHeadingM2" data-bs-parent="#faqChatGPTMobile">
+              <div class="accordion-body p-2">
+                Existen versiones gratuitas y de pago, según las funciones y límites de uso.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teoría -->
+  <p class="lead text-dark">
+    ChatGPT es un modelo avanzado de <strong>Inteligencia Artificial</strong> desarrollado por OpenAI que combina técnicas de <strong>aprendizaje profundo</strong> y procesamiento de lenguaje natural para comprender y generar texto de manera coherente y contextual. Se utiliza en múltiples aplicaciones: asistencia en redacción, traducción, educación y programación.
+  </p>
+
+  <!-- Capacidades -->
+  <div class="card shadow-sm border-primary mb-4" style="border-radius: 15px;">
+    <div class="card-header bg-primary text-white text-center">
+      Capacidades de ChatGPT
+    </div>
+    <div class="card-body">
+      <p class="text-dark">
+        ChatGPT puede:
+      </p>
+      <ul class="list-group list-group-flush mb-0">
+        <li class="list-group-item"><i class="bi bi-chat-dots-fill me-2 text-primary"></i>Responder preguntas de manera coherente</li>
+        <li class="list-group-item"><i class="bi bi-pencil-square me-2 text-success"></i>Redactar textos creativos y resúmenes</li>
+        <li class="list-group-item"><i class="bi bi-code-slash me-2 text-warning"></i>Generar código y asistir en programación</li>
+        <li class="list-group-item"><i class="bi bi-translate me-2 text-info"></i>Traducir idiomas y asistir en educación</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Curiosidades -->
+  <div class="card shadow-sm border-info mb-4">
+    <div class="card-header bg-info text-white text-center">
+      🤖 Curiosidades de ChatGPT
+    </div>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Fue entrenado con miles de millones de palabras de libros, artículos y webs.</li>
+        <li class="list-group-item">GPT-3 tiene 175 mil millones de parámetros; ChatGPT-4 es aún más avanzado.</li>
+        <li class="list-group-item">Se usa en educación, atención al cliente y productividad.</li>
+        <li class="list-group-item">Puede aprender de ejemplos y retroalimentación humana.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Video -->
+  <h2 class="video-title mt-5 mb-3 text-center">Video Explicativo</h2>
+  <div class="ratio ratio-16x9 mb-4">
+    <iframe src="videos/chat-gpt-que-es-como-funciona-y-hasta-donde-puede-llegar-1080-ytshorts.savetube.me.mp4" title="Video ChatGPT" allowfullscreen></iframe>
+  </div>
+  <p class="text-center mt-2 text-muted">Video sobre ChatGPT y sus aplicaciones prácticas.</p>
+
+  <!-- Galería de imágenes -->
+  <div class="card shadow-sm mb-4" style="max-width: 900px; margin: 0 auto; padding: 15px; text-align: center;">
+    <h2 class="mb-0">Galería de imagenes</h2>
+  </div>
+  <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+    <div class="p-1" style="flex: 1 1 250px; text-align: center;">
+      <img src="fotos/ejemplo1.avif" class="img-fluid rounded shadow-sm" alt="ChatGPT ejemplo 1">
+    </div>
+    <div class="p-1" style="flex: 1 1 250px; text-align: center;">
+      <img src="fotos/ejemplo2.avif" class="img-fluid rounded shadow-sm" alt="ChatGPT ejemplo 2">
+    </div>
+    <div class="p-1" style="flex: 1 1 250px; text-align: center;">
+      <img src="fotos/ejemplo3.avif" class="img-fluid rounded shadow-sm" alt="ChatGPT ejemplo 3">
+    </div>
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="text-center mt-5 mb-3">© - Lucio Aguirre</footer>
+
+<!-- Botón Volver Arriba -->
+<a href="#" class="btn btn-primary btn-lg rounded-circle position-fixed" 
+   style="bottom: 30px; right: 30px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 24px; z-index: 1000;">
+  ↑
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="burbujas.js"></script>
+</body>
+</html>
